@@ -1,27 +1,37 @@
-import React from "react";
-import ema from "../assets/circleForEma-removebg.png";
-import svgLogo from "../assets/comunication.svg";
-import ScrollAnimation from "react-animate-on-scroll";
+import React, { useRef } from "react";
+// import { useScroll, useTransform } from "framer-motion";
 
 export const Section2 = () => {
+  // const { scrollYProgress } = useScroll();
+
+  const scrollRef = useRef(null);
+
+  // function useParallax(value, distance) {
+  //   return useTransform(value, [0, 1], [-distance, distance]);
+  // }
+  // const y = useParallax(scrollYProgress, 50);
+
   return (
-    <div
-      id="deneme123"
-      className="h-[100vh] w-full bg-red-400 flex flex-col items-center justify-center "
-    >
-      <ScrollAnimation
-        duration={2}
-        animateOnce={true}
-        animateIn="animate__zoomInDown"
-        animateOut="animate__zoomOutDown"
+    <section id="product">
+      <div
+        ref={scrollRef}
+        className="w-full h-full bg-[#8C53FE] flex  items-center justify-around "
       >
-        <img src={ema} className="w-[250px] my-10" />
-      </ScrollAnimation>
-      <h1>HABERLEŞME</h1>
-      <h2 className="m-5 break-all">
-        Ema robotumuz bünyesindeki yazılımlar sayesinde hem mobil uygulamamızla
-        hem web servislerinizle haberleşebilir.
-      </h2>
-    </div>
+        <div className="flex-2">
+          {/* <motion.div
+            className="w-[200px] h-[200px] bg-gradient-to-r from-cyan-500 to-blue-500  text-white flex items-center justify-center"
+            whileInView={{
+              scale: [2, 1, 1, 2, 2],
+              rotate: [0, 0, 270, 270, 0],
+              borderRadius: ["20%", "20%", "50%", "20%", "50%"],
+            }}
+            transition={{ duration: 2 }}
+          >
+            <h1>Ema Foto</h1>
+          </motion.div> */}
+        </div>
+        <div className="z-30"></div>
+      </div>
+    </section>
   );
 };
