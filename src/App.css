@@ -1,40 +1,6 @@
-.navbarFirstSlide {
-  animation: topToBottom 2s ease-in-out;
+.color-change{
+  transition: background-color 0.5s ease-in-out; 
 }
-@keyframes topToBottom {
-  0% {
-    margin-top: -100%;
-  }
-  100% {
-    margin-bottom: 0;
-  }
-}
-
-.slideLeft {
-  animation: toLeft 1ms ease;
-}
-@keyframes toLeft {
-  0% {
-    margin-right: -100%;
-  }
-  100% {
-    margin-left: 0;
-  }
-}
-
-.slideRight {
-  animation: toRight 1ms ease;
-}
-@keyframes toRight {
-  0% {
-    margin-right: 0%;
-  }
-  100% {
-    margin-left: 100;
-  }
-
-}
-
 
 /* :root {
   --length: 0;
@@ -94,3 +60,89 @@ body {
     stroke-dashoffset: 0;
   }
 } */
+
+
+
+
+
+/* * {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+code {
+  font-family: input-mono, monospace;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+.card-bg{
+  background-image: url(/src/assets/smallBg1.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 500px) {
+  .section-1-bg{
+    background-image: url(/src/assets/smallBg1.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 500px) {
+  .section-1-bg{
+    background-image: url(/src/assets/largeBg1.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+}
+
+
+circle,
+rect,
+line {
+  stroke-width: 10px;
+  stroke-linecap: round;
+  fill: transparent;
+}
+
+
+
+:root {
+  --black-gradient: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+.card-item-div {
+  transition: all 0.2s;
+}
+.card-item-div:hover {
+  background-image: url("https://i.imgur.com/HdaSkzj.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
